@@ -4,4 +4,4 @@ Meeting App
 
 #### License
 
-MIT
+MIT# frappeMeetingApp
