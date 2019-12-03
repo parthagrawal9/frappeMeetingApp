@@ -19,3 +19,25 @@ def send_invitation_mails(meeting):
     
     else:
         frappe.msgprint(_("Status should be Planning!"))
+
+# Test API
+
+@frappe.whitelist(allow_guest=True)
+def get_hi():
+    return "Hello"
+
+@frappe.whitelist(allow_guest=True)
+def get_hi_name(name):
+    return name
+
+@frappe.whitelist(allow_guest=True)
+def get_add(n1,n2):
+    return int(n1)+int(n2)
+
+@frappe.whitelist(allow_guest=True)
+def get_meeting(meeting):
+    return frappe.get_doc('meeting',meeting)
+
+@frappe.whitelist(allow_guest=True)
+def get_meeting_all():
+    return frappe.get_doc('meeting')
